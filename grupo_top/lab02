@@ -1,13 +1,1 @@
-EXERCICIO 01
-EXERCICIO 02
-EXERCICIO 03:
-#include <stdio.h>
-int main() {
-  int digito = 9;
-  printf("Digite um número ímpar (menor que 9):\n");
-  scanf("%d", &digito);
-  for (int i = 0; i < (digito/2 + 1); i++) { // quantidade de linhas
-    for (int j = i + 1; j < digito - i + 1; j++) 
-      printf("%d ", j);
-    printf("\n"); }
-  return 0; }
+
