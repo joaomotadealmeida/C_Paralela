@@ -1,5 +1,6 @@
 EXERCICIO 01
-EXERCICIO 02;
+
+EXERCICIO 02:
 #include <stdio.h>
 void checkNota (int MA) {
   if (MA >= 9) printf("A");
@@ -21,6 +22,7 @@ int main() {
   printf("Média = %d\nNota = ", MA);
   checkNota(MA);
   return 0; }
+
 EXERCICIO 03:
 #include <stdio.h>
 int main() {
