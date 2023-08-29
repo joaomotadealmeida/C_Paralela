@@ -1,5 +1,26 @@
 EXERCICIO 01
-EXERCICIO 02
+EXERCICIO 02;
+#include <stdio.h>
+void checkNota (int MA) {
+  if (MA >= 9) printf("A");
+  else if (MA >= 7.5) printf("B");
+  else if (MA >= 6) printf("C");
+  else if (MA >= 4) printf("D");
+  else printf("E"); }
+int main() {
+  int N1, N2, N3, ME, MA;
+  printf("Digite a N1: ");
+  scanf("%d", &N1);
+  printf("Digite a N2: ");
+  scanf("%d", &N2);
+  printf("Digite a N3: ");
+  scanf("%d", &N3);
+  printf("Digite a ME: ");
+  scanf("%d", &ME);
+  MA = (N1 + N2*2 + N3*3 + ME)/7;
+  printf("Média = %d\nNota = ", MA);
+  checkNota(MA);
+  return 0; }
 EXERCICIO 03:
 #include <stdio.h>
 int main() {
