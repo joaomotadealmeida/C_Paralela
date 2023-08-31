@@ -50,3 +50,22 @@ int main() {
   return 0; }
 
 EXERCICIO 14:
+#include <stdio.h>
+
+int main() {
+    char str[100], ch;
+    int pos, length=0;
+    printf("Digite a string (limite 100 char): ");
+    scanf("%[^\n]%*c", str);
+    printf("Digite o char: ");
+    scanf(" %c", &ch);
+    printf("Deseja adicionar em qual posicao: ");
+    scanf("%d", &pos);
+    while (str[length] != '\0') {
+        length++; }
+    for (int i = length; i >= pos; i--) {
+        str[i] = str[i - 1]; }
+    str[pos - 1] = ch;
+    printf("%s\n", str);
+    return 0;
+}
