@@ -3,3 +3,6 @@ EXERCICIO02:
 
 EXERCICIO03:
 ![image](https://github.com/joaomotadealmeida/C_Paralela/assets/142590244/469e8835-5175-4c31-9404-78fdc0a888e4)
+
+EXERCICIO13:
+![image](https://github.com/joaomotadealmeida/C_Paralela/assets/142590244/b2779c4f-997a-4b6b-aaa6-d499199d1f42)
