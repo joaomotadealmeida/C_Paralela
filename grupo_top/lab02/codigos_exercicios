@@ -1,5 +1,29 @@
 EXERCICIO 01
 
+#include <stdio.h>
+#include <stdlib.h>//Biblioteca para usar rand.
+
+
+int main(){
+int matriz[3][3];
+for(int i =0;i < 3; i ++){
+  printf("\n");
+  for(int j = 0; j< 3; j++){
+    matriz[i][j] = rand() % 100;
+    printf("%d " ,matriz[i][j]); }
+}
+int menorN = matriz[0][0];
+int linha = 0;
+for (int i = 0; i < 3; i++){
+  for(int j = 0; j <3; j++){
+    if(matriz[i][j]<menorN){
+       menorN = matriz[i][j];
+       linha = i; }}}
+printf(" Linha que contém o menor valor: %i ", linha);
+return 0;
+}
+
+
 EXERCICIO 02:
 #include <stdio.h>
 void checkNota (int MA) {
@@ -23,6 +47,8 @@ int main() {
   checkNota(MA);
   return 0; }
 
+
+
 EXERCICIO 03:
 #include <stdio.h>
 int main() {
@@ -34,6 +60,65 @@ int main() {
       printf("%d ", j);
     printf("\n"); }
   return 0; }
+
+EXERCICIO 04:
+#include <stdio.h>
+#include <string.h>//Biblioteca para trabalhar com string mais facil.
+int main(void){ 
+char nome1[]= "Laura";
+char nome2[]= "Alix";
+
+if (strcmp(nome1,nome2) < 0 ){
+printf("Nomes em ordem alfabetica: %s , %s ",nome1, nome2 ); }
+else {printf("Nomes em ordem alfabetica: %s , %s", nome2,nome1); }
+}
+EXERCICIO 05:
+
+#include <stdio.h>
+#include <stdlib.h>//Biblioteca para usar rand
+int multiplicalinha(int matriz[][3],int linha,int multiplica_linha){
+printf("Matriz com a linha multiplicada: \n");
+for(int j = 0; j < 3; j ++){
+  matriz[linha][j] = matriz[linha][j] * multiplica_linha; }
+for(int i =0; i < 3;i++){
+  printf("\n");
+  for(int j = 0;j < 3; j++){
+    printf("%d ",matriz[i][j]); } } }
+int multiplicacoluna(int matriz[][3],int coluna,int multiplica_coluna){
+printf("Matriz com a coluna multiplicada: \n");
+for(int i = 0; i< 3; i++){
+     matriz[i][coluna] = matriz[i][coluna] * multiplica_coluna; }
+for(int i = 0; i < 3; i++){
+  printf("\n");
+  for(int j = 0; j<3;j++){
+    printf("%d ",matriz[i][j]); } } }
+int main(void){
+int matriz[3][3];
+
+for(int i = 0; i < 3; i++){
+  for(int j = 0; j< 3; j++){
+        matriz[i][j] = rand() % 100; } }
+printf("Matriz primária: \n ");
+for (int i = 0; i <3;i++){
+  printf("\n");
+  for(int j = 0; j <3; j++) {
+    printf("%d ",matriz[i][j]);
+ } }
+int multiplica_linha;
+int multiplica_coluna;
+int linha;
+int coluna;
+printf("\n Digite a linha que quer multiplicar:\n");
+scanf("%d",&linha);
+printf("\n Digite a coluna que deseja multiplicar:\n");
+scanf("%d",&coluna);
+printf("\n Digite o valor que quer multiplicar a linha: \n");
+scanf("%d",&multiplica_linha);
+printf("\n Digite o valor que deseja multiplicar a coluna: \n");
+scanf("%d",&multiplica_coluna);
+multiplicalinha(matriz,linha,multiplica_linha);
+multiplicacoluna(matriz,coluna,multiplica_coluna);
+ }
 
 EXERCICIO 06:
 #include <stdio.h>
@@ -155,6 +240,77 @@ int main(){
 
     return 0;
 }
+EXERCICIO 09:
+#include <stdio.h>
+#include <stdlib.h>//biblioteca para usar função rand
+#include<time.h> //biblioteca para gerar número aleatórios diferentes
+
+
+int transforma_matriz(int linha, int coluna, int matriz[linha][coluna]){
+for(int i = 0; i < linha; i ++){
+  for(int j = 0; j < coluna; j++){
+     if(matriz[i][j] < 0){
+       matriz[i][j] = matriz[i][j] * -1; } } } 
+
+printf("\n Matriz Modular: \n");
+for(int i = 0; i < linha; i ++){
+  printf("\n");
+  for(int j = 0; j < 3; j ++){
+    printf("%d ",matriz[i][j]); } }
+
+
+}
+
+
+int main(void){
+
+srand(time(NULL));
+
+int linha = 3;
+int coluna = 3;
+int matriz[linha][coluna];
+for(int i = 0; i < linha; i++){
+  for(int j = 0;j < coluna; j++){
+    matriz[i][j] = -rand() % 100; } }
+
+printf("\n  Matriz primária: \n");
+for(int i = 0; i < linha; i++){
+  printf("\n");
+  for(int j = 0; j < coluna; j ++){
+    printf("%d ",matriz[i][j]); } }
+transforma_matriz(linha, coluna,matriz);
+
+
+ }
+EXERCICIO 12:                                                                                          
+
+#include <stdio.h>
+
+int busca(char *string,char caractere){
+for(int i = 0; string[i] != '\0'; i++){
+  if(string[i] == caractere) {
+    return i; } }
+return -1;
+
+ }
+
+int main (void){
+
+char frase[] = "frase aleatória só para fazer o laboratório.";
+char caractere;
+printf("\n Digite o caractere que deseja procurar:\n ");
+scanf("%c",&caractere);
+int posicao = busca(frase,caractere);
+
+if(posicao != -1){
+  printf("\n Caractere %c encontrado na posição %i\n", caractere , posicao); }
+else{
+  printf("\n Caractere %c não encontrado\n", caractere); }
+
+printf("A frase era: %s", frase);
+
+
+ }
 
 EXERCICIO 13:
 #include <stdio.h>
