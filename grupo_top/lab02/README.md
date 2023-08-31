@@ -11,3 +11,7 @@ EXERCICIO03:
 EXERCICIO13:
 
 ![image](https://github.com/joaomotadealmeida/C_Paralela/assets/142590244/b2779c4f-997a-4b6b-aaa6-d499199d1f42)
+
+
+EXERCICIO 14:
+![image](https://github.com/joaomotadealmeida/C_Paralela/assets/142590244/ccbe2a53-8aaa-4bbe-93df-61be6e598220)
