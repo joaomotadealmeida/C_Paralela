@@ -35,6 +35,128 @@ int main() {
     printf("\n"); }
   return 0; }
 
+EXERCICIO 06:
+#include <stdio.h>
+
+int main(){
+    int t_linha, t_coluna;
+    
+    printf("Digite quantas linhas e colunas a matriz possui: \n");
+    scanf("%d %d", &t_linha, &t_coluna);
+    
+    int mat[t_linha][t_coluna], transp[t_coluna][t_linha];
+
+    printf("Insira os elementos da matriz: \n");
+    for(int i = 0; i < t_linha; i++){
+        for(int j = 0; j < t_coluna; j++){
+            scanf("%d", &mat[i][j]);
+            transp[j][i] = mat[i][j];
+        }
+    }
+
+    printf("Matriz original: \n");
+    for(int i = 0; i < t_linha; i++){
+        for(int j = 0; j < t_coluna; j++){
+            printf("%d ", mat[i][j]);
+        }
+        printf("\n");
+    }
+
+    printf("Matriz transposta: \n");
+    for(int i = 0; i < t_coluna; i++){
+        for(int j = 0; j < t_linha; j++){
+            printf("%d ", transp[i][j]);
+        }
+        printf("\n");
+    }
+    return 0;
+}
+
+EXERCICIO 07:
+#include <stdio.h>
+#include <string.h>
+
+typedef struct
+{
+    char nome[20];
+    int idade;
+    float peso;
+    float altura;
+} Pessoa;
+
+int main(){
+    Pessoa pessoas[5];
+
+    for (int i = 0; i < sizeof(pessoas)/sizeof(pessoas[0]); i++){
+        printf("Digite o nome da pessoa %d: ", i + 1);
+        scanf("%s", &pessoas[i].nome);
+        
+        printf("Digite a idade da pessoa %d: ", i + 1);
+        scanf("%d", &pessoas[i].idade);
+
+        printf("Digite o peso da pessoa %d: ", i + 1);
+        scanf("%f", &pessoas[i].peso);
+
+        printf("Digite a altura da pessoa %d: ", i + 1);
+        scanf("%f", &pessoas[i].altura);
+
+        printf("\n");
+    }
+
+    for (int i = 0; i < 3; i++){
+        char n_nome[20];
+        printf("Digite o nome da pessoa: \n");
+        scanf("%s", n_nome);
+        
+        for (int j = 0; j < sizeof(pessoas)/sizeof(pessoas[0]); j++){
+            if (strcmp(n_nome, pessoas[j].nome) == 0){
+                printf("Nome: %s\n", pessoas[j].nome);
+                printf("Idade: %d\n", pessoas[j].idade);
+                printf("Peso: %.2f\n", pessoas[j].peso);
+                printf("Altura: %.2f\n", pessoas[j].altura);
+                break;
+            }
+            printf("Nao encontrado\n");    
+        }
+    }
+  return 0;
+}
+
+EXERCICIO 08:
+#include <stdio.h>
+
+void transposta(int linha, int coluna, int mat[linha][coluna], int resultado[coluna][linha]){
+    for(int i = 0; i < linha; i++){
+        for(int j = 0; j < coluna; j++){
+            resultado[j][i] = mat[i][j];
+        }
+    }   
+}
+
+int main(){
+    int linha = 2; 
+    int coluna = 3;
+    
+    int matriz[2][3] = {
+        {1,2,3},
+        {4,5,6}
+        };
+   
+    int m_transposta[coluna][linha];
+
+    transposta(linha, coluna, matriz, m_transposta);
+
+    printf("Transposed Matrix:\n");
+    for (int i = 0; i < coluna; i++) {
+        for (int j = 0; j < linha; j++) {
+            printf("%d ", m_transposta[i][j]);
+        }
+        printf("\n");
+    }
+
+    return 0;
+}
+
 EXERCICIO 13:
 #include <stdio.h>
 int main() {
