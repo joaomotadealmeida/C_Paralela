@@ -115,8 +115,7 @@ int main(){
                 printf("Peso: %.2f\n", pessoas[j].peso);
                 printf("Altura: %.2f\n", pessoas[j].altura);
                 break;
-            }
-            printf("Nao encontrado\n");    
+            } 
         }
     }
   return 0;
