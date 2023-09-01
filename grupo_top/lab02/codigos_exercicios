@@ -279,9 +279,121 @@ for(int i = 0; i < linha; i++){
   for(int j = 0; j < coluna; j ++){
     printf("%d ",matriz[i][j]); } }
 transforma_matriz(linha, coluna,matriz);
-
-
  }
+
+EXERCICIO 10:
+#include <stdio.h>
+
+void multiplicaLinha(int linha, int coluna, int matriz[linha][coluna],int linha_mult, int k) {
+    for (int i = 0; i < coluna; i++) {
+        matriz[linha_mult][i] *= k;
+    }
+}
+
+void multiplicaColuna(int linha, int coluna, int matriz[linha][coluna],int coluna_mult, int k) {
+    for (int i = 0; i < linha; i++) {
+        matriz[i][coluna_mult] *= k;
+    }
+}
+
+int main(void) {
+    int linha = 3;
+    int coluna = 3;
+    int matriz[3][3] = {
+        {1, 2, 3},
+        {4, 5, 6},
+        {7, 8, 9}};
+
+    int linha_mult = 1;
+    int col_mult = 1;
+    int k = 2;
+
+    printf("Matriz original\n");
+    for (int i = 0; i < linha; i++) {
+        for (int j = 0; j < coluna; j++) {
+            printf("%d ", matriz[i][j]);
+        }
+        printf("\n");
+    }
+
+    multiplicaLinha(linha, coluna, matriz, linha_mult, k);
+
+    printf("Linha multiplicada\n");
+    for (int i = 0; i < linha; i++) {
+        for (int j = 0; j < coluna; j++) {
+            printf("%d ", matriz[i][j]);
+        }
+        printf("\n");
+    }
+
+    multiplicaColuna(linha, coluna, matriz, col_mult, k);
+
+    printf("Coluna multiplicada\n");
+    for (int i = 0; i < linha; i++) {
+        for (int j = 0; j < coluna; j++) {
+            printf("%d ", matriz[i][j]);
+        }
+        printf("\n");
+    }
+    return 0;
+}
+
+EXERCICIO 11:
+#include <stdio.h>
+
+void somaLinha(int l, int c, int matriz[l][c], int L1){
+  for (int i = 0; i < c; i++){
+    matriz[L1+1][i] += matriz[L1][i];
+  }
+}
+
+void somacoluna(int l, int c, int matriz[l][c], int C1){
+  for (int i = 0; i < l; i++){
+    matriz[i][C1+1] += matriz[i][C1];
+  }
+}
+
+int main() {
+  int linha = 3;
+  int coluna = 3;
+  int L1 = 0;
+  int C1 = 0;
+  int matriz[3][3] = {
+    {1, 2, 3},
+    {4, 5, 6},
+    {7, 8, 9}};
+
+  printf("Matriz original\n");
+    for (int i = 0; i < linha; i++) {
+        for (int j = 0; j < coluna; j++) {
+            printf("%d ", matriz[i][j]);
+        }
+        printf("\n");
+    }
+
+  somaLinha(linha, coluna, matriz, L1);
+
+  printf("L1 + L2\n");
+    for (int i = 0; i < linha; i++) {
+        for (int j = 0; j < coluna; j++) {
+            printf("%d ", matriz[i][j]);
+        }
+        printf("\n");
+    }
+
+  somacoluna(linha, coluna, matriz, C1);
+
+  printf("C1 + C2\n");
+    for (int i = 0; i < linha; i++) {
+        for (int j = 0; j < coluna; j++) {
+            printf("%d ", matriz[i][j]);
+        }
+        printf("\n");
+    }
+  
+  return 0;
+}
+
 EXERCICIO 12:                                                                                          
 
 #include <stdio.h>
