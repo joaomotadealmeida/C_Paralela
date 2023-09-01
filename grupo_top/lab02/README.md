@@ -21,9 +21,24 @@ EXERCICIO05:
 
 ![image](https://github.com/joaomotadealmeida/C_Paralela/assets/93332531/00f2dc3d-511b-46e0-b4ad-b970e494e2b7)
 
-EXERCICIO09:
+EXERCICIO06:
+![image](https://github.com/joaomotadealmeida/C_Paralela/assets/93838303/43d50733-39dc-4394-8ed4-9803f99706c3)
 
+EXERCICIO07:
+![image](https://github.com/joaomotadealmeida/C_Paralela/asseets/93838303/c85d50b9-6d21-4d31-b4bf-7d9b648fc1e0)
+![image](https://github.com/joaomotadealmeida/C_Paralela/assets/93838303/7d402655-4862-4361-8cea-203bc8ed54c2)
+
+EXERCICIO08:
+![image](https://github.com/joaomotadealmeida/C_Paralela/assets/93838303/1c158997-5c97-40ef-81b8-77d1116dc540)
+
+EXERCICIO09:
 ![image](https://github.com/joaomotadealmeida/C_Paralela/assets/93332531/e2be3945-2b65-4487-8a39-c0871b9c5c55)
+
+EXERCICIO10:
+![image](https://github.com/joaomotadealmeida/C_Paralela/assets/93838303/6191ceaa-2944-4916-869d-b486752d81b7)
+
+EXERCICIO11:
+![image](https://github.com/joaomotadealmeida/C_Paralela/assets/93838303/6dd73738-af63-43d4-935a-a498157b94a0)
 
 EXERCICIO12:
 
