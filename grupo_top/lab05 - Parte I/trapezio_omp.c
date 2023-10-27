@@ -39,7 +39,7 @@ int main(int argc, char* argv[]) {
 double f(double x) {
    double return_val;
 
-   return_val = exp(x);
+   return_val = x * x;
    return return_val;
 }
 
