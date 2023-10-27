@@ -46,5 +46,5 @@ double calcula_trapezio(double a, double b, int n, double h) {
 }
 
 double f(double x) {
-   return exp(x);
+   return x*x;
 }
