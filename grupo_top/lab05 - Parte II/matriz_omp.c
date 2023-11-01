@@ -19,7 +19,7 @@ int main(int argc, char* argv[]) {
    }
 
    thread_count = strtol(argv[1], NULL, 10);
-   printf("Digite o valor de x e n\n");
+   printf("Digite o valor de m e n\n");
    scanf("%d", &m);
    scanf("%d", &n);
 
