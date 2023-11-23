@@ -16,7 +16,7 @@ void fatorial(int n, mpz_t resultado) {
 }
 
 // FUNCAO TESTE DE EULER
-oid Euler(int precisao, mpf_t resultado, int numero_threads) {
+void Euler(int precisao, mpf_t resultado, int numero_threads) {
     mpf_t resultado_parcial; // MPF representa funções aritméticas de ponto flutuante de alto nível de precisão 
     mpf_init2(resultado_parcial, 10000);  // Inicializa a variável para resultado parcial
 
