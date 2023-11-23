@@ -16,18 +16,18 @@ void fatorial(int n, mpz_t resultado) {
 }
 
 // FUNCAO TESTE DE EULER
-void Euler(int precisao, mpf_t resultado, int numero_threads) {
+oid Euler(int precisao, mpf_t resultado, int numero_threads) {
     mpf_t resultado_parcial; // MPF representa funções aritméticas de ponto flutuante de alto nível de precisão 
     mpf_init2(resultado_parcial, 10000);  // Inicializa a variável para resultado parcial
 
-    mpz_t fatorial;
-    mpz_init(fatorial);  // Inicializa a variável armazenando fatoriais
+    mpz_t fat;
+    mpz_init(fat);  // Inicializa a variável armazenando fatoriais
 
     mpf_init2(resultado, 10000);  // Inicializa o resultado final
     mpf_set_d(resultado, 0.0);   // Inicializa resultado como 0.0
 
     // Loop paralelizado usando OpenMP para calcular a série infinita
-    #pragma omp parallel for numero_threads(numero_threads)
+    #pragma omp parallel for num_threads(numero_threads)
     for (int i = 0; i <= precisao; i++) {
         mpz_t fatorial_local;
         mpf_t resultado_parcial_local;
@@ -48,7 +48,7 @@ void Euler(int precisao, mpf_t resultado, int numero_threads) {
     }
 
     mpf_clear(resultado_parcial);  // Libera a variável para resultado parcial
-    mpz_clear(fatorial);           // Libera a variável para os fatoriais
+    mpz_clear(fat);           // Libera a variável para os fatoriais
 }
 
 // MAIN
