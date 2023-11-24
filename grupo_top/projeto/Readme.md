@@ -16,4 +16,3 @@ gcc -o projeto_paralelo projeto_paralelo.c  -fopenmp -lgmp -lm
 • Qual foi o speedup da última versão  e como eles fizeram para melhorar:
 
 
-• Considerações sobre a estratégia de paralelismo adotada e como isso auxiliou na escala do problema:
