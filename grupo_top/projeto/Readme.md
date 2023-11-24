@@ -1,8 +1,8 @@
 • Como compilar o programa na plataforma disponibilizada:
-
+gcc -o projeto_paralelo projeto_paralelo.c  -fopenmp -lgmp
 
 • Como executar o programa:
-
+./projeto_paralelo <precisao> <numero_threads>
 
 • Comprovação de resultados:
 
