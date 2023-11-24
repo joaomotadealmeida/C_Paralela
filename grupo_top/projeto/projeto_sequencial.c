@@ -43,7 +43,7 @@ int main() {
   mpf_t resultado;
   EulerTest(n, resultado);
 
-  gmp_printf("result %.2000Ff\n", resultado);
+  gmp_printf("result %.2500Ff\n", resultado);
 
   mpf_clear(resultado); // Libera a variável do resultado final
 
