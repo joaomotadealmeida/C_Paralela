@@ -7,6 +7,16 @@ gcc -o projeto_paralelo projeto_paralelo.c  -fopenmp -lgmp -lm
 ./projeto_paralelo 10000 <numero_threads>
 
 • Comprovação de resultados:
+Execução serial:
+![image](https://github.com/joaomotadealmeida/C_Paralela/assets/93838303/4639eab0-a37f-4280-9f5c-1419cb82a487)
+Execução paralela com 2 threads:
+![image](https://github.com/joaomotadealmeida/C_Paralela/assets/93838303/4ba25b50-b62d-4ce4-bec9-c8fbd3112d3d)
+Execução paralela com 3 threads:
+![image](https://github.com/joaomotadealmeida/C_Paralela/assets/93838303/b0e2481c-1726-47f4-a3a6-026defbaf26a)
+Execução paralela com 5 threads:
+![image](https://github.com/joaomotadealmeida/C_Paralela/assets/93838303/b29c24b1-182c-462d-91c4-f09116c3f9fa)
+Execução paralela com 60 threads:
+![image](https://github.com/joaomotadealmeida/C_Paralela/assets/93838303/893b012f-8a48-4851-b3f7-e2b50164fd8b)
 
 
 • Descrição simples do algoritmo e estratégia de paralelismo adotada:
